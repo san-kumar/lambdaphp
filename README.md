@@ -58,7 +58,7 @@ site hosted on Apache. It is possible to use your own custom domains with https 
 
 ## Need more features?
 
-Please [star this project](https://github.com/lambdaphp/lambdaphp) or comment in the forum to show your interest. This was just a weekend project 
+Please [star this project](https://github.com/san-kumar/lambdaphp) or comment in the forum to show your interest. This was just a weekend project 
 for my own amusement but I will definitely add more features and examples if there is any interest! :)
 
 ## Limitations

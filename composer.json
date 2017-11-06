@@ -14,5 +14,11 @@
     "ext-zip": "*",
     "lambdaphp/installer": "*"
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../../libs/lambdaphp/installer"
+    }
+  ],
   "minimum-stability": "dev"
 }

@@ -4,6 +4,7 @@ public/*
 
 composer.lock
 composer.phar
+composer.json
 lambdaphp.ini
 
 !public/404.php
