@@ -8,6 +8,7 @@ lambdaphp.ini
 
 !public/404.php
 !public/index.html
-!public/static/lambda.css
-!public/static/lambda.png
-!public/other/index.php
+!public/static
+!public/static/*
+!public/other
+!public/other/*
