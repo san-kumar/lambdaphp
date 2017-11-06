@@ -1,0 +1,118 @@
+<html>
+<head>
+    <base href="/web/"/>
+    <link rel="stylesheet" href="./static/lambda.css"/>
+</head>
+<body>
+<h1><a href="https://github.com/lambda-php/lambdaphp"></a>LambdaPHP v0.01</h1>
+<p>Quick and Dirty PHP website hosting using Aws Lambda (i.e. pay by requests instead of paying a fixed monthly hosting
+    fees).
+</p>
+<p>Remember the good old days when you used to FTP your PHP files, static HTML files, css files to a server - now you
+    can do that using AWS Lambda!
+</p>
+<p>Any files you put inside the <code>public</code> directory will be accessible as if they were hosted on an Apache
+    server with <code>mod_php</code>. Difference is you don’t have to pay any monthly hosting fees because they’re
+    running on AWS Lambda which means you are billed only by the number of requests. This includes 1 million free
+    requests per month and 400,000 GB-seconds of compute time per month (<a
+            href="https://aws.amazon.com/lambda/pricing/">details here</a>).
+</p>
+<h2><a id="Installation_12"></a>Installation</h2>
+<p>Installation is simple. All you need is PHP 7+ with <a href="https://getcomposer.org"><code>composer</code></a></p>
+<p>To install, just type this on your command line (terminal)</p>
+<pre><code>composer create-project lambdaphp/lambdaphp &lt;project-name&gt; </code></pre>
+<p>This should create a <em>project-name</em> directory inside which there is a <code>public</code> directory. Any
+    files, including any PHP files you put in the <code>public</code> directory can be accessed directly from your web
+    browser.
+</p>
+<p>Once your are done putting files in the <code>public</code> folder, just type this on your command line to deploy
+    your site using AWS Lambda:
+</p>
+<pre><code>lambdaphp deploy </code></pre>
+<p><em>You may need to enter your AWS credentials as <a
+        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html">described here</a> (same
+    as aws-cli)</em>.
+</p>
+<p>If everything goes as expected, you should see this message:</p>
+<pre><code>Website deployed! To access your site visit: https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-folder&gt;&lt;.php|css|js|etc&gt; </code></pre>
+<p><em>(If you get a “command not found” error, make sure you have <code>.\vendor\bin</code> in your PATH)</em></p>
+<p>That’s it! LambdaPHP will give you the URL using which you can access your site just like any other site hosted on
+    Apache. It is possible to use your own custom domains with https too (see below).
+</p>
+<h2><a id="Features_41"></a>Features</h2>
+<ul>
+    <li>Host static (.css, .js, .png, etc) and dynamic files (.php)</li>
+    <li>Most PHP functionality, GET, POST requests, etc work seamlessly.</li>
+    <li>File operations incl <code>file_get_contents</code>, <code>file_put_contents</code>, etc works seamlessly with
+        AWS S3 (via stream wrapping)
+    </li>
+    <li><code>Sessions</code> and user authentication works right out of the box! (via DynamoDB session wrapper)</li>
+</ul>
+<h2><a id="Examples_48"></a>Examples</h2>
+<ul>
+    <li>
+        <p>Simple site</p>
+    </li>
+    <li>
+        <p>File uploader to S3</p>
+    </li>
+    <li>
+        <p>User signup and authentication</p>
+    </li>
+    <li>
+        <p>Free hosting on custom domains (with https)</p>
+    </li>
+</ul>
+<h2><a id="Need_more_features_58"></a>Need more features?</h2>
+<p>Please <a href="https://github.com/lambda-php/lambdaphp">star this project</a> or comment in the forum to show your
+    interest. This was just a weekend project for my own amusement but I will definitely add more features and examples
+    if there is any interest! :)
+</p>
+<h2><a id="Limitations_63"></a>Limitations</h2>
+<ul>
+    <li>Handling <a href="https://www.google.com/search?q=aws+lambda+startup+time">cold starts</a></li>
+    <li>Website code size <a href="https://www.google.com/search?q=aws+lambda+code+size">limit</a></li>
+</ul>
+<h2><a id="FAQ_68"></a>FAQ</h2>
+<ul>
+    <li>
+        <p>Which PHP version will my site be running?</p>
+        <p>Currently it supports PHP 7.2.</p>
+    </li>
+    <li>
+        <p>Is it really free to host my site this way?</p>
+        <p>Yes you get 1 million free requests per month and and 400,000 GB-seconds of compute time per month. Currently
+            lambdaphp runs very fast with 128MB RAM and has an average response time is 400ms. So using the <a
+                    href="https://s3.amazonaws.com/lambda-tools/pricing-calculator.html">pricing calculator here</a>,
+            you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every assets on
+            your page creates a new request, so factor that in and bundle them together using Webpack.
+        </p>
+    </li>
+    <li>
+        <p>My site is loading slowly?</p>
+        <p><a href="https://www.phase2technology.com/blog/bundle-your-front-end-with-webpack">Use Webpack</a> to reduce
+            the number of requests per page (bundle CSS, JS, Font files, etc into a single js file). This will also make
+            sure to reduce the number of requests per load helping you stretch your 1M requests even more.
+        </p>
+    </li>
+    <li>
+        <p>My website gets lots of traffic… can this handle it?</p>
+        <p>Theoretically speaking AWS Lambda scales very well so it should be able to handle a lot of traffic easily. It
+            performs better with more traffic since that reduces the load time. But for anything above 20M requests /
+            mo, you’ll be missing the point of this whole thing because you can get a dedicated instance for $10/mo
+            anyway ;)
+        </p>
+    </li>
+    <li>
+        <p>How do I add <code>X</code> PHP extension?</p>
+        <p>I’ve currently compiled php using the most popular PHP extensions. If you need to a custom extension, just
+            using the Dockerfile in Robert’s project below.
+        </p>
+    </li>
+</ul>
+<h2><a id="Thanks_94"></a>Thanks</h2>
+<ul>
+    <li><a href="https://github.com/ZeroSharp/serverless-php">Robert Anderson</a> for the original inspiration.</li>
+</ul>
+</body>
+</html>

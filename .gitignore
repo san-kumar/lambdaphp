@@ -1,0 +1,13 @@
+.idea/
+vendor/
+public/*
+
+composer.lock
+composer.phar
+lambdaphp.ini
+
+!public/404.php
+!public/index.html
+!public/static/lambda.css
+!public/static/lambda.png
+!public/other/index.php
