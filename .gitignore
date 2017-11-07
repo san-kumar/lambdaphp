@@ -1,14 +1,7 @@
 .idea/
 vendor/
-public/*
 
 composer.lock
 composer.phar
 lambdaphp.ini
 
-!public/404.php
-!public/index.html
-!public/static
-!public/static/*
-!public/other
-!public/other/*

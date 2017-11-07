@@ -1,6 +1,6 @@
 # LambdaPHP v0.01
 
-Quick and Dirty PHP website hosting using Aws Lambda (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
+Quick and Dirty PHP website hosting (with PHP support) using Aws Lambda (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
 
 Remember the good old days when you used to FTP your PHP files, static HTML files, css files to a server -
 now you can do that using AWS Lambda!
@@ -24,7 +24,7 @@ including any PHP files you put in the `public` directory can be accessed direct
 Once your are done putting files in the `public` folder, just type this on your command line to 
 deploy your site using AWS Lambda:
 
-    lambdaphp deploy
+    lambdaphp deploy -v
 
 *You may need to enter your AWS credentials as [described here](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) (same as aws-cli)*. 
 
@@ -41,10 +41,10 @@ site hosted on Apache. It is possible to use your own custom domains with https 
 
 ## Features
 
-- Host static (.css, .js, .png, etc) and dynamic files (.php)
-- Most PHP functionality, GET, POST requests, etc work seamlessly. 
+- Instantly host your static (.css, .js, .png, etc) and dynamic files (.php)
+- Most PHP functionality, GET, POST, SESSIONS, etc work seamlessly. 
 - File operations incl `file_get_contents`, `file_put_contents`, etc works seamlessly with AWS S3 (via stream wrapping) 
-- `Sessions` and user authentication works right out of the box! (via DynamoDB session wrapper)
+- `Sessions` and user authentication works right out of the box! (batteries included DynamoDB session wrapper)
 
 ## Examples
 
