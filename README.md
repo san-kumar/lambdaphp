@@ -83,11 +83,6 @@ site hosted on Apache. It is possible to use your **own custom domains** with ht
  
    [Demo](https://www.lambdaphp.host/) |  [How to guide](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)
 
-## Need more features?
-
-Please [star this project](https://github.com/san-kumar/lambdaphp) or comment in the forum to show your interest. This was just a weekend project 
-for my own amusement but I will definitely add more features and examples if there is any interest! :)
-
 ## Limitations
 
 - Handling [cold starts](https://www.google.com/search?q=aws+lambda+startup+time)
@@ -127,7 +122,12 @@ for my own amusement but I will definitely add more features and examples if the
 
   It's a quick and dirty way to get simple PHP website online without paying any monthly hosting fees. Also a great resource if you wish to
   learn Amazon's amazing services like API Gateway, AWS Lambda, S3, DynamoDB, Cognito (which work together under the hood of lambdaphp) for your own sites.
-  
+
+## Need more features?
+
+Please [star this project](https://github.com/san-kumar/lambdaphp) or comment on [hacker news](https://news.ycombinator.com/item?id=15648209) show your interest. This was just a weekend project 
+for my own amusement but I will definitely add more features and examples if there is interest! :)
+ 
   
 ## Thanks
 
