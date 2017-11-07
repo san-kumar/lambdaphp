@@ -2,10 +2,10 @@
 
 Quick and Dirty PHP website hosting (with PHP support) using Aws Lambda (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
 
-Remember the good old days when you used to FTP your PHP files, static HTML files, css files to a server -
-now you can do that using AWS Lambda!
+Remember the good old days when you used to FTP your PHP files, static HTML files, css files to a web server? Now you can do that using 
+AWS Lambda with LambdaPHP!
 
-## Why should I care?
+## But why should I care?
 
 Any files you put inside the `public` directory will be accessible as if they were hosted on an Apache server with 
 `mod_php`. There are no handlers to write or config files to maintain. For example if you have two files, *index.php* 
@@ -40,7 +40,7 @@ If everything goes as expected, you should see this message:
     To access your site visit:
     https://XXXX.execute-api.us-east-1.amazonaws.com/web/<any-file-in-public-folder><.php|css|js|etc>
     
-*(If you get a "command not found" error, make sure you have `.\vendor\bin` in your PATH)*
+*(If you get a "command not found" error, make sure you have `./vendor/bin` in your PATH)*
 
 That's it! LambdaPHP will give you the URL using which you can access your site just like any other
 site hosted on Apache. It is possible to use your **own custom domains** with https too \([details here](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)\).
@@ -104,6 +104,10 @@ for my own amusement but I will definitely add more features and examples if the
   Yes you get 1 million free requests per month and and 400,000 GB-seconds of compute time per month.
   Currently lambdaphp runs very fast with 128MB RAM and has an average response time is 400ms. So using the [pricing calculator here](https://s3.amazonaws.com/lambda-tools/pricing-calculator.html),
   you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every assets on your page creates a new request, so factor that in and bundle them together using Webpack.
+  
+- How do I update my site?
+
+  Just run `lambdaphp deploy` again!
   
 - My site is loading slowly?
 
