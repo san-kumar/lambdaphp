@@ -125,7 +125,7 @@ site hosted on Apache. It is possible to use your **own custom domains** with ht
 
 ## Need more features?
 
-Please [star this project](https://github.com/san-kumar/lambdaphp) or comment on [hacker news](https://news.ycombinator.com/item?id=15648209) show your interest. This was just a weekend project 
+Please [star this project](https://github.com/san-kumar/lambdaphp) or comment on [hacker news](https://news.ycombinator.com/item?id=15648209) to show your interest. This was just a weekend project 
 for my own amusement but I will definitely add more features and examples if there is interest! :)
  
   
