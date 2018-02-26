@@ -1,11 +1,10 @@
 # LambdaPHP v0.01
 
-Quick and Dirty PHP website hosting (with PHP support) using Aws Lambda (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
+Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
 
-Remember the good old days when you used to FTP your PHP files, static HTML files, css files to a web server? Now you can do that using 
-AWS Lambda with LambdaPHP!
+Now it's possible for you to host PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php.
 
-## But why should I care?
+## So why should you care?
 
 Any files you put inside the `public` directory will be accessible as if they were hosted on an Apache server with 
 `mod_php`. There are no handlers to write or config files to maintain. For example if you have two files, *index.php* 
