@@ -105,7 +105,7 @@ site hosted on Apache. It is possible to use your **own custom domains** with ht
   
 - My site is loading slowly?
 
-  The average load time is 500ms (via pingdom).
+  The average load time is 50ms (via pingdom).
   [Use Webpack](https://www.phase2technology.com/blog/bundle-your-front-end-with-webpack) to reduce the number of requests per page (bundle CSS, JS, Font files, etc into a single js file). This will also make sure to reduce the number of requests per load helping you stretch your 1M requests even more.  
   
 - How much traffic can this handle?
