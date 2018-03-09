@@ -2,17 +2,16 @@
 
 Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
 
-Now it's possible for you to host dynamic PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php.
+Now it's possible for you to host dynamic PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php. Any files you put inside the `public` directory will be accessible as if they were hosted on an Apache server with 
+`mod_php`. There are no handlers to write or config files to maintain.
 
-## So why should you care?
+For example, put two files, *index.php* and *deep/other.php* inside your `public` folder. The type `lambdaphp deploy`. Once deployed you should be able to access them online at https://yourdomain.com/index.php, https://yourdomain.com/deep/other.php, etc (details below). 
 
-Any files you put inside the `public` directory will be accessible as if they were hosted on an Apache server with 
-`mod_php`. There are no handlers to write or config files to maintain. For example if you have two files, *index.php* 
-and *deep/other.php* inside your `public` folder, by just typing `lambdaphp deploy` you can deploy them online at https://yourdomain.com/index.php, https://yourdomain.com/deep/other.php, etc. 
+## But why should I care?
 
 **Difference is you don't have to pay any monthly hosting fees** because they're running on AWS Lambda which 
 means you are billed only by the number of requests. This includes 1 million free requests per month and 400,000 GB-seconds 
-of compute time per month ([details here](https://aws.amazon.com/lambda/pricing/)).
+of compute time per month ([details here](https://aws.amazon.com/lambda/pricing/)). 
 
 
 ## Installation
@@ -46,7 +45,7 @@ site hosted on Apache. It is possible to use your **own custom domains** with ht
 
 ## Features
 
-LambdaPHP allows you to use AWS Lambda for:
+Using LambdaPHP you can now use AWS Lambda to:
 
 - Instantly host your static (.css, .js, .png, etc) and dynamic files (.php)
 - Most PHP functionality, GET, POST, SESSIONS, etc work seamlessly. 
@@ -128,6 +127,8 @@ LambdaPHP allows you to use AWS Lambda for:
 
 Please [star this project](https://github.com/san-kumar/lambdaphp) to show your interest. This was just a weekend project 
 for my own amusement but I will definitely add more features and examples if there is interest! :)
+
+Contributions and PRs are always welcome.
  
   
 ## Thanks
