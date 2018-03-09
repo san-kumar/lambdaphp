@@ -97,7 +97,7 @@ Using LambdaPHP you can now use AWS Lambda to:
 - Is it really free to host my site this way?
 
   Yes you get 1 million free requests per month and and 400,000 GB-seconds of compute time per month.
-  Currently lambdaphp runs very fast with 128MB RAM and has an average response time is 400ms. So using the [pricing calculator here](https://s3.amazonaws.com/lambda-tools/pricing-calculator.html),
+  Currently lambdaphp runs very fast with 128MB RAM and has an average response time is 50 to 100ms. So using the [pricing calculator here](https://s3.amazonaws.com/lambda-tools/pricing-calculator.html),
   you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every assets on your page creates a new request, so factor that in and bundle them together using Webpack.
   
 - How do I update my site?
