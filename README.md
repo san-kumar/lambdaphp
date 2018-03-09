@@ -125,11 +125,12 @@ Using LambdaPHP you can now use AWS Lambda to:
 
 ## Need more features?
 
-Please [star this project](https://github.com/san-kumar/lambdaphp) to show your interest. This was just a weekend project 
-for my own amusement but I will definitely add more features and examples if there is interest! :)
+This was just a weekend project for my own amusement but I will definitely add more features 
 
-Contributions and PRs are always welcome.
- 
+- Please [star this project](https://github.com/san-kumar/lambdaphp) to show your interest. 
+- Leave me some feedback on this [Hacker news thread](https://news.ycombinator.com/item?id=16552325) (please use *Issues* for bugs only).
+- Contribute and send me PRs (I will add your name to credits/thanks).
+
   
 ## Thanks
 
