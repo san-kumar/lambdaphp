@@ -2,7 +2,7 @@
 
 Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
 
-Now it's possible for you to host PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php.
+Now it's possible for you to host dynamic PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php.
 
 ## So why should you care?
 
@@ -45,6 +45,8 @@ That's it! LambdaPHP will give you the URL using which you can access your site 
 site hosted on Apache. It is possible to use your **own custom domains** with https too \([details here](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)\).
 
 ## Features
+
+LambdaPHP allows you to use AWS Lambda for:
 
 - Instantly host your static (.css, .js, .png, etc) and dynamic files (.php)
 - Most PHP functionality, GET, POST, SESSIONS, etc work seamlessly. 
