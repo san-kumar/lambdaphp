@@ -1,6 +1,6 @@
 # LambdaPHP v0.01
 
-Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fees). 
+Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fee). 
 
 Now it's possible for you to host dynamic PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php. Any files you put inside the `public` directory will be accessible as if they were hosted on an Apache server with 
 `mod_php`. There are no handlers to write or config files to maintain.
@@ -9,7 +9,7 @@ For example, put two files, *index.php* and *deep/other.php* inside your `public
 
 ## But why should I care?
 
-**Difference is you don't have to pay any monthly hosting fees** because they're running on AWS Lambda which 
+**The Difference is you don't have to pay any monthly hosting fees** because they're running on AWS Lambda which 
 means you are billed only by the number of requests. This includes 1 million free requests per month and 400,000 GB-seconds 
 of compute time per month ([details here](https://aws.amazon.com/lambda/pricing/)). 
 
@@ -25,7 +25,7 @@ To install, just type this on your command line (terminal)
 This should create a *project-name* directory inside which there is a `public` directory. Any files,
 including any PHP files you put in the `public` directory can be accessed directly from your web browser.
 
-Once your are done putting files in the `public` folder, just type this on your command line to 
+Once you're done putting files in the `public` folder, just type this on your command line to 
 deploy your site on AWS Lambda:
 
     lambdaphp deploy -v
@@ -96,9 +96,9 @@ Using LambdaPHP you can now use AWS Lambda to:
    
 - Is it really free to host my site this way?
 
-  Yes you get 1 million free requests per month and and 400,000 GB-seconds of compute time per month.
+  Yes, you get 1 million free requests per month and 400,000 GB-seconds of compute time per month.
   Currently lambdaphp runs very fast with 128MB RAM and has an average response time is 50 to 100ms. So using the [pricing calculator here](https://s3.amazonaws.com/lambda-tools/pricing-calculator.html),
-  you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every assets on your page creates a new request, so factor that in and bundle them together using Webpack.
+  you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every asset on your page creates a new request, so factor that in and bundle them together using Webpack.
   
 - How do I update my site?
 
@@ -128,7 +128,7 @@ Using LambdaPHP you can now use AWS Lambda to:
 This was just a weekend project for my own amusement but I will definitely add more features 
 
 - Please [star this project](https://github.com/san-kumar/lambdaphp) to show your interest. 
-- Leave me some feedback on this [Hacker news thread](https://news.ycombinator.com/item?id=16552325) (please use *Issues* for bugs only).
+- Leave me some feedback on this [Hackernews thread](https://news.ycombinator.com/item?id=16552325) (please use *Issues* for bugs only).
 - Contribute and send me PRs (I will add your name to credits/thanks).
 
   
