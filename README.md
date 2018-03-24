@@ -52,6 +52,7 @@ Using LambdaPHP you can now use AWS Lambda to:
 - File operations incl `file_get_contents`, `file_put_contents`, etc works seamlessly with AWS S3 (using S3 stream wrapping) 
 - `Sessions` and works right out of the box! (DynamoDB session wrapper under the hood)
 - User authentication support using AWS Cognito (demo included)
+- Cron support 
 
 ## Examples
 
@@ -123,6 +124,27 @@ Using LambdaPHP you can now use AWS Lambda to:
   It's a quick and dirty way to get simple PHP website online without paying any monthly hosting fees. Also a great resource if you wish to
   learn Amazon's amazing services like API Gateway, AWS Lambda, S3, DynamoDB, Cognito (which work together under the hood of lambdaphp) for your own sites.
 
+- How to add cron jobs?
+
+  Open (or create) file `lambdaphp.ini` and create a section called `crontab`. To add cron jobs just use the following format
+  
+  ```
+  job_name = 'cron(rate_expression)',php_file.php,enabled|disabled
+  ```
+    
+ So let's say you want to ping your site every 5 minutes. Here is how your `lambdaphp.ini` should look
+ 
+ ```
+ [crontab]
+ ping = 'cron(*/5 * * * *)',ping.php,enabled
+ ```
+
+After you run `lambdaphp deploy`, this will create a cron job to run `ping.php` ()inside `public` directory) every 5 minutes!
+
+To remove this cron job, just remove it from your `lambdaphp.ini` and run `lambdaphp deploy` again (alternatively you can mark last column as `disabled` to temporarily suspend a cron job without removing it)
+
+The timing of your cron job is controlled by the [rate expressions](https://docs.aws.amazon.com/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html) as described in the link.
+  
 ## Need more features?
 
 This was just a weekend project for my own amusement but I will definitely add more features 
