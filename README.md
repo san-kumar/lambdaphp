@@ -132,18 +132,18 @@ Using LambdaPHP you can now use AWS Lambda to:
   job_name = 'cron(rate_expression)',php_file.php,enabled|disabled
   ```
     
- So let's say you want to ping your site every 5 minutes. Here is how your `lambdaphp.ini` should look
+   So let's say you want to ping your site every 5 minutes. Here is how your `lambdaphp.ini` should look
  
- ```
- [crontab]
- ping = 'cron(*/5 * * * *)',ping.php,enabled
- ```
+  ```
+   [crontab]
+   ping = 'cron(*/5 * * * *)',ping.php,enabled
+  ```
 
-After you run `lambdaphp deploy`, this will create a cron job to run `ping.php` ()inside `public` directory) every 5 minutes!
+  After you run `lambdaphp deploy`, this will create a cron job to run `ping.php` ()inside `public` directory) every 5 minutes!
 
-To remove this cron job, just remove it from your `lambdaphp.ini` and run `lambdaphp deploy` again (alternatively you can mark last column as `disabled` to temporarily suspend a cron job without removing it)
+  To remove this cron job, just remove it from your `lambdaphp.ini` and run `lambdaphp deploy` again (alternatively you can mark last column as `disabled` to temporarily suspend a cron job without removing it)
 
-The timing of your cron job is controlled by the [rate expressions](https://docs.aws.amazon.com/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html) as described in the link.
+  The timing of your cron job is controlled by the [rate expressions](https://docs.aws.amazon.com/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html) as described in the link.
   
 ## Need more features?
 
