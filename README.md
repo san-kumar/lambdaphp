@@ -126,7 +126,7 @@ Using LambdaPHP you can now use AWS Lambda to:
 
 - How to add cron jobs?
 
-  Open (or create) file `lambdaphp.ini` and create a section called `crontab`. To add cron jobs just use the following format
+  Open (or create) file `lambdaphp.ini` (it should be inside your project's root folder) and create a section called `crontab`. To add cron jobs just use the following format
   
   ```
   job_name = 'cron(rate_expression)',php_file.php,enabled|disabled
