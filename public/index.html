@@ -18,20 +18,18 @@
 <div class="container">
     <h1 id="lambdaphpv001">LambdaPHP v0.01</h1>
 
-    <p>Quick and Dirty PHP website hosting (with PHP support) using Aws Lambda (i.e. pay by requests instead of paying a fixed monthly hosting fees). </p>
+    <p>Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fee). </p>
 
-    <p>Remember the good old days when you used to FTP your PHP files, static HTML files, css files to a web server? Now you can do that using
-        AWS Lambda with LambdaPHP!</p>
+    <p>Now it's possible for you to host dynamic PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php. Any files you put inside the <code>public</code> directory will be accessible as if they were hosted on an Apache server with
+        <code>mod_php</code>. There are no handlers to write or config files to maintain.</p>
+
+    <p>For example, put two files, <em>index.php</em> and <em>deep/other.php</em> inside your <code>public</code> folder. The type <code>lambdaphp deploy</code>. Once deployed you should be able to access them online at https://yourdomain.com/index.php, https://yourdomain.com/deep/other.php, etc (details below). </p>
 
     <h2 id="butwhyshouldicare">But why should I care?</h2>
 
-    <p>Any files you put inside the <code>public</code> directory will be accessible as if they were hosted on an Apache server with
-        <code>mod_php</code>. There are no handlers to write or config files to maintain. For example if you have two files, <em>index.php</em>
-        and <em>deep/other.php</em> inside your <code>public</code> folder, by just typing <code>lambdaphp deploy</code> you can deploy them online at https://yourdomain.com/index.php, https://yourdomain.com/deep/other.php, etc. </p>
-
-    <p><strong>Difference is you don't have to pay any monthly hosting fees</strong> because they're running on AWS Lambda which
+    <p><strong>The Difference is you don't have to pay any monthly hosting fees</strong> because they're running on AWS Lambda which
         means you are billed only by the number of requests. This includes 1 million free requests per month and 400,000 GB-seconds
-        of compute time per month (<a href="https://aws.amazon.com/lambda/pricing/">details here</a>).</p>
+        of compute time per month (<a href="https://aws.amazon.com/lambda/pricing/">details here</a>). </p>
 
     <h2 id="installation">Installation</h2>
 
@@ -45,7 +43,7 @@
     <p>This should create a <em>project-name</em> directory inside which there is a <code>public</code> directory. Any files,
         including any PHP files you put in the <code>public</code> directory can be accessed directly from your web browser.</p>
 
-    <p>Once your are done putting files in the <code>public</code> folder, just type this on your command line to
+    <p>Once you're done putting files in the <code>public</code> folder, just type this on your command line to
         deploy your site on AWS Lambda:</p>
 
     <pre><code>lambdaphp deploy -v
@@ -66,6 +64,8 @@ https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-fold
         site hosted on Apache. It is possible to use your <strong>own custom domains</strong> with https too (<a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">details here</a>).</p>
 
     <h2 id="features">Features</h2>
+
+    <p>Using LambdaPHP you can now use AWS Lambda to:</p>
 
     <ul>
         <li>Instantly host your static (.css, .js, .png, etc) and dynamic files (.php)</li>
@@ -128,9 +128,9 @@ https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-fold
 
         <li><p>Is it really free to host my site this way?</p>
 
-            <p>Yes you get 1 million free requests per month and and 400,000 GB-seconds of compute time per month.
-                Currently lambdaphp runs very fast with 128MB RAM and has an average response time is 400ms. So using the <a href="https://s3.amazonaws.com/lambda-tools/pricing-calculator.html">pricing calculator here</a>,
-                you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every assets on your page creates a new request, so factor that in and bundle them together using Webpack.</p></li>
+            <p>Yes, you get 1 million free requests per month and 400,000 GB-seconds of compute time per month.
+                Currently lambdaphp runs very fast with 128MB RAM and has an average response time is 50 to 100ms. So using the <a href="https://s3.amazonaws.com/lambda-tools/pricing-calculator.html">pricing calculator here</a>,
+                you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every asset on your page creates a new request, so factor that in and bundle them together using Webpack.</p></li>
 
         <li><p>How do I update my site?</p>
 
@@ -138,7 +138,7 @@ https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-fold
 
         <li><p>My site is loading slowly?</p>
 
-            <p>The average load time is 500ms (via pingdom).
+            <p>The average load time is 50ms (via pingdom).
                 <a href="https://www.phase2technology.com/blog/bundle-your-front-end-with-webpack">Use Webpack</a> to reduce the number of requests per page (bundle CSS, JS, Font files, etc into a single js file). This will also make sure to reduce the number of requests per load helping you stretch your 1M requests even more.  </p></li>
 
         <li><p>How much traffic can this handle?</p>
@@ -158,8 +158,15 @@ https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-fold
 
     <h2 id="needmorefeatures">Need more features?</h2>
 
-    <p>Please <a href="https://github.com/san-kumar/lambdaphp">star this project</a> or comment on <a href="https://news.ycombinator.com/item?id=15648209">hacker news</a> show your interest. This was just a weekend project
-        for my own amusement but I will definitely add more features and examples if there is interest! :)</p>
+    <p>This was just a weekend project for my own amusement but I will definitely add more features </p>
+
+    <ul>
+        <li>Please <a href="https://github.com/san-kumar/lambdaphp">star this project</a> to show your interest. </li>
+
+        <li>Leave me some feedback on this <a href="https://news.ycombinator.com/item?id=16552325">Hackernews thread</a> (please use <em>Issues</em> for bugs only).</li>
+
+        <li>Contribute and send me PRs (I will add your name to credits/thanks).</li>
+    </ul>
 
     <h2 id="thanks">Thanks</h2>
 
