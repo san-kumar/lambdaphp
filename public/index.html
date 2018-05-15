@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
     <title>LambdaPHP - Cheap PHP hosting with Aws Lambda</title>
@@ -168,4 +169,183 @@ https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-fold
     </ul>
 </div>
 </body>
+=======
+<html>
+<head>
+    <title>LambdaPHP - Cheap PHP hosting with Aws Lambda</title>
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <style>
+        li > p {
+            margin-left: 22px;
+        }
+
+        li > p:first-child {
+            display: inline;
+            margin-left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="lambdaphpv001">LambdaPHP v0.01</h1>
+
+    <p>Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fee). </p>
+
+    <p>Now it's possible for you to host dynamic PHP files, static HTML files, css files on AWS Lambda (serverless) just like an Apache server running mod_php. Any files you put inside the <code>public</code> directory will be accessible as if they were hosted on an Apache server with
+        <code>mod_php</code>. There are no handlers to write or config files to maintain.</p>
+
+    <p>For example, put two files, <em>index.php</em> and <em>deep/other.php</em> inside your <code>public</code> folder. The type <code>lambdaphp deploy</code>. Once deployed you should be able to access them online at https://yourdomain.com/index.php, https://yourdomain.com/deep/other.php, etc (details below). </p>
+
+    <h2 id="butwhyshouldicare">But why should I care?</h2>
+
+    <p><strong>The Difference is you don't have to pay any monthly hosting fees</strong> because they're running on AWS Lambda which
+        means you are billed only by the number of requests. This includes 1 million free requests per month and 400,000 GB-seconds
+        of compute time per month (<a href="https://aws.amazon.com/lambda/pricing/">details here</a>). </p>
+
+    <h2 id="installation">Installation</h2>
+
+    <p>Installation is simple. All you need is PHP 7+ with <a href="https://getcomposer.org"><code>composer</code></a></p>
+
+    <p>To install, just type this on your command line (terminal)</p>
+
+    <pre><code>composer create-project lambdaphp/lambdaphp &lt;project-name&gt;
+</code></pre>
+
+    <p>This should create a <em>project-name</em> directory inside which there is a <code>public</code> directory. Any files,
+        including any PHP files you put in the <code>public</code> directory can be accessed directly from your web browser.</p>
+
+    <p>Once you're done putting files in the <code>public</code> folder, just type this on your command line to
+        deploy your site on AWS Lambda:</p>
+
+    <pre><code>lambdaphp deploy -v
+</code></pre>
+
+    <p><em>You may need to enter your AWS credentials as <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html">described here</a> (same as aws-cli)</em>. </p>
+
+    <p>If everything goes as expected, you should see this message:</p>
+
+    <pre><code>Website deployed!
+To access your site visit:
+https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-folder&gt;&lt;.php|css|js|etc&gt;
+</code></pre>
+
+    <p><em>(If you get a "command not found" error, make sure you have <code>./vendor/bin</code> in your PATH)</em></p>
+
+    <p>That's it! LambdaPHP will give you the URL using which you can access your site just like any other
+        site hosted on Apache. It is possible to use your <strong>own custom domains</strong> with https too (<a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">details here</a>).</p>
+
+    <h2 id="features">Features</h2>
+
+    <p>Using LambdaPHP you can now use AWS Lambda to:</p>
+
+    <ul>
+        <li>Instantly host your static (.css, .js, .png, etc) and dynamic files (.php)</li>
+
+        <li>Most PHP functionality, GET, POST, SESSIONS, etc work seamlessly. </li>
+
+        <li>File operations incl <code>file_get_contents</code>, <code>file_put_contents</code>, etc works seamlessly with AWS S3 (using S3 stream wrapping) </li>
+
+        <li><code>Sessions</code> and works right out of the box! (DynamoDB session wrapper under the hood)</li>
+
+        <li>User authentication support using AWS Cognito (demo included)</li>
+    </ul>
+
+    <h2 id="examples">Examples</h2>
+
+    <ul>
+        <li><p>Static site</p>
+
+            <p><a href="https://www.lambdaphp.host">Demo</a> |  <a href="https://github.com/san-kumar/lambdaphp/tree/master/public">Source code</a></p></li>
+
+        <li><p>Handling POST data</p>
+
+            <p><a href="https://www.lambdaphp.host/examples/post.php">Demo</a> |  <a href="https://github.com/san-kumar/lambdaphp/blob/master/public/examples/post.php">Source code</a></p></li>
+
+        <li><p>Creating sessions using AWS DynamoDB</p>
+
+            <p><a href="https://www.lambdaphp.host/examples/session.php">Demo</a> |  <a href="https://github.com/san-kumar/lambdaphp/blob/master/public/examples/session.php">Source code</a></p></li>
+
+        <li><p>File IO on AWS lambda (using S3 wrapper)</p>
+
+            <p><a href="https://www.lambdaphp.host/examples/guestbook.php">Demo</a> |  <a href="https://github.com/san-kumar/lambdaphp/blob/master/public/examples/guestbook.php">Source code</a></p></li>
+
+        <li><p>Simple File uploader to AWS S3</p>
+
+            <p><a href="https://www.lambdaphp.host/examples/upload.php">Demo</a> |  <a href="https://github.com/san-kumar/lambdaphp/blob/master/public/examples/upload.php">Source code</a></p></li>
+
+        <li><p>User signup and login using AWS Cognito</p>
+
+            <p><a href="https://www.lambdaphp.host/examples/auth/">Demo</a> |  <a href="https://github.com/san-kumar/lambdaphp/tree/master/public/examples/auth">Source code</a></p></li>
+
+        <li><p>Using Custom domains with https support</p>
+
+            <p><a href="https://www.lambdaphp.host/">Demo</a> |  <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">How to guide</a></p></li>
+    </ul>
+
+    <h2 id="limitations">Limitations</h2>
+
+    <ul>
+        <li>Handling <a href="https://www.google.com/search?q=aws+lambda+startup+time">cold starts</a></li>
+
+        <li>Website code size <a href="https://www.google.com/search?q=aws+lambda+code+size">limit</a></li>
+    </ul>
+
+    <h2 id="faq">FAQ</h2>
+
+    <ul>
+        <li><p>Which PHP version will my site be running?</p>
+
+            <p>Currently it supports PHP 7.2.</p></li>
+
+        <li><p>Is it really free to host my site this way?</p>
+
+            <p>Yes, you get 1 million free requests per month and 400,000 GB-seconds of compute time per month.
+                Currently lambdaphp runs very fast with 128MB RAM and has an average response time is 50 to 100ms. So using the <a href="https://s3.amazonaws.com/lambda-tools/pricing-calculator.html">pricing calculator here</a>,
+                you can process about 1,000,000 (1M) requests per month free of cost. YMMV. Also remember every asset on your page creates a new request, so factor that in and bundle them together using Webpack.</p></li>
+
+        <li><p>How do I update my site?</p>
+
+            <p>Just run <code>lambdaphp deploy</code> again!</p></li>
+
+        <li><p>My site is loading slowly?</p>
+
+            <p>The average load time is 50ms (via pingdom).
+                <a href="https://www.phase2technology.com/blog/bundle-your-front-end-with-webpack">Use Webpack</a> to reduce the number of requests per page (bundle CSS, JS, Font files, etc into a single js file). This will also make sure to reduce the number of requests per load helping you stretch your 1M requests even more.  </p></li>
+
+        <li><p>How much traffic can this handle?</p>
+
+            <p>Theoretically speaking AWS Lambda scales very well so it should be able to handle a lot of traffic easily. It performs better with more traffic since that reduces the load time. But for anything above 20M requests / mo, you'll be missing the point of this whole thing because you can get a dedicated instance for $10/mo anyway ;)       </p></li>
+
+        <li><p>How do I add <code>X</code> PHP extension?</p>
+
+            <p>I've currently compiled php using the most popular PHP extensions. If you need to a custom extension, just using the
+                Dockerfile in Robert's project below. </p></li>
+
+        <li><p>What's the point of it anyway?</p>
+
+            <p>It's a quick and dirty way to get simple PHP website online without paying any monthly hosting fees. Also a great resource if you wish to
+                learn Amazon's amazing services like API Gateway, AWS Lambda, S3, DynamoDB, Cognito (which work together under the hood of lambdaphp) for your own sites.</p></li>
+    </ul>
+
+    <h2 id="needmorefeatures">Need more features?</h2>
+
+    <p>This was just a weekend project for my own amusement but I will definitely add more features </p>
+
+    <ul>
+        <li>Please <a href="https://github.com/san-kumar/lambdaphp">star this project</a> to show your interest. </li>
+
+        <li>Leave me some feedback on this <a href="https://news.ycombinator.com/item?id=16552325">Hackernews thread</a> (please use <em>Issues</em> for bugs only).</li>
+
+        <li>Contribute and send me PRs (I will add your name to credits/thanks).</li>
+    </ul>
+
+    <h2 id="thanks">Thanks</h2>
+
+    <ul>
+        <li><a href="https://github.com/ZeroSharp/serverless-php">Robert Anderson</a> for the original inspiration.</li>
+    </ul>
+</div>
+</body>
+>>>>>>> 23eee829eaf634d78c85d7485476e9c10fbafc3b
 </html>
