@@ -153,6 +153,12 @@ This was just a weekend project for my own amusement but I will definitely add m
 - Leave me some feedback on this [Hackernews thread](https://news.ycombinator.com/item?id=16552325) (please use *Issues* for bugs only).
 - Contribute and send me PRs (I will add your name to credits/thanks).
 
+
+## Credits
+
+[Navneet Rai](https://www.dayandnight.in/about/navneet/) - Web programing 
+
+[Sanchit Bhatnagar](https://www.dayandnight.in/about/sanchit/) - Concept
   
 ## Thanks
 
