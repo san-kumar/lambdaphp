@@ -21,7 +21,7 @@ Installation is simple. All you need is PHP 7+ with [`composer`](https://getcomp
 
 To install, just type this on your command line (terminal)
 
-    composer create-project lambdaphp/lambdaphp &lt;project-name&gt;
+    composer create-project lambdaphp/lambdaphp <project-name>
 
 This should create a *project-name* directory inside which there is a `public` directory. Any files,
 including any PHP files you put in the `public` directory can be accessed directly from your web browser.
@@ -108,6 +108,15 @@ How's that for speed improvements? :)
 - Website code size [limit is 250MB](https://www.google.com/search?q=aws+lambda+code+size)
 
 ## FAQ
+
+- I'm getting an error during deployment?
+
+  This is still in beta so bear with me.
+  But here are some remedies:
+
+  - Try to deploy again. AWS has a [very strange bug](https://stackoverflow.com/a/37438525/1031454) where it takes a few seconds for some commands to work (sometimes). Basically what I mean to say is have you tried turning it off and on again?
+  - Make sure the API keys you are using have access to following: `AdministratorAccess` in your IAM (if you're in a hurry). Though it's better to enable the following access instead (requires full access): `S3` (for files), `DynamoDb` (for sessions), `Lambda` (wonder why?), `Api Gateway` (for invoking lambda via http).
+  - Try to clear composer's cache and re-installing it (composer sometimes picks old versions)
 
 - Which PHP version will my site be running?
 
