@@ -37,7 +37,7 @@ If everything goes as expected, you should see this message:
 
     Website deployed!
     To access your site visit:
-    https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-folder&gt;&lt;.php|css|js|etc&gt;
+    https://XXXX.execute-api.us-east-1.amazonaws.com/web/&lt;any-file-in-public-folder><.php|css|js|etc&gt;
 
 *(If you get a "command not found" error, make sure you have `./vendor/bin` in your PATH)*
 
@@ -56,39 +56,37 @@ Using LambdaPHP you can now use AWS Lambda to:
 - Cron support
 - Supports Lambda Layers (for PHP executable and `vendor` dir both!)
 
-## ~~Examples~~
+## Examples
 
-The examples were hosted on a `.host` TLD which turned to be huge scam. They want $100 / year to renew this domain I initially registered for $2 / year.
-I'm probably not going to renew this domain again, so if somebody has a spare domain which fits the project theme registered for no reason (heh)
-do let me know (in the issues) and I'll move them there!
+You can also use your own domain to host these demos
 
  - Static site
 
-   [Demo](https://www.lambdaphp.host) |  [Source code](https://github.com/san-kumar/lambdaphp/tree/master/public)
+   [Demo](https://a8imjk4g54.execute-api.us-east-1.amazonaws.com/web) |  [Source code](https://github.com/san-kumar/lambdaphp/tree/master/public)
 
  - Handling POST data
 
-   [Demo](https://www.lambdaphp.host/examples/post.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/post.php)
+   [Demo](https://a8imjk4g54.execute-api.us-east-1.amazonaws.com/web/examples/post.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/post.php)
 
  - Creating sessions using AWS DynamoDB
 
-   [Demo](https://www.lambdaphp.host/examples/session.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/session.php)
+   [Demo](https://a8imjk4g54.execute-api.us-east-1.amazonaws.com/web/examples/session.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/session.php)
 
  - File IO on AWS lambda (using S3 wrapper)
 
-   [Demo](https://www.lambdaphp.host/examples/guestbook.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/guestbook.php)
+   [Demo](https://a8imjk4g54.execute-api.us-east-1.amazonaws.com/web/examples/guestbook.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/guestbook.php)
 
  - Simple File uploader to AWS S3
 
-   [Demo](https://www.lambdaphp.host/examples/upload.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/upload.php)
+   [Demo](https://a8imjk4g54.execute-api.us-east-1.amazonaws.com/web/examples/upload.php) |  [Source code](https://github.com/san-kumar/lambdaphp/blob/master/public/examples/upload.php)
 
  - User signup and login using AWS Cognito
 
-   [Demo](https://www.lambdaphp.host/examples/auth/) |  [Source code](https://github.com/san-kumar/lambdaphp/tree/master/public/examples/auth)
+   [Demo](https://a8imjk4g54.execute-api.us-east-1.amazonaws.com/web/examples/auth/) |  [Source code](https://github.com/san-kumar/lambdaphp/tree/master/public/examples/auth)
 
  - Using Custom domains with https support
 
-   [Demo](https://www.lambdaphp.host/) |  [How to guide](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)
+   [How to guide](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)
 
 ## New layer support
 
