@@ -14,28 +14,35 @@ Once deployed you should be able to access them online at https://yourdomain.com
 means you are billed only by the number of requests. This includes 1 million free requests per month and 400,000 GB-seconds
 of compute time per month ([details here](https://aws.amazon.com/lambda/pricing/)).
 
-### Other advantages of going serverless include
+## Other advantages of going serverless include
 
-#### Super fast deployments:
-- With just a simple command your updates are live instantly.
+### Super fast deployments:
 
-#### Unlimited scalability:
-- Aws Lambda can scale from 0 to virtually infinite instances without any extra code or setup. So whether your site gets one hit or a million hits a day it can handle all scenarios easily.
+With just a simple command your updates are live instantly.
 
-#### Ultra Low cost:
-- Are you hosting your site on a $500 server yet not fully utilizing all server resources?  AWS lambda is billed by number of requests not by monthly usage, so for a site that gets less than a million requests per month it is virtually free forever!
+### Unlimited scalability:
 
-#### Focus on your ideas not servers:
-- Are you spending a lot of time configuring load balancers, docker containers, etc to handle loads? Now you don't have to since it's all done for you.
+Aws Lambda can scale from 0 to virtually infinite instances without any extra code or setup. So whether your site gets one hit or a million hits a day it can handle all scenarios easily.
 
-#### Improved latency and geolocation:
-	- Why make a user in India connect to a server thousands of miles away in America? Even if your site is super fast, the download will still be slow because of network latency. Aws Lambda Edge makes it possible for users to connect to the nearest server making the downloads super fast.
+### Ultra Low cost:
 
-#### No server vulnerabilities:
-	- Since the lambda instances (or web servers) are created on demand and destroyed after each request, it makes it virtually impossible to hack your web server or install any malware on it.
+Are you hosting your site on a $500 server yet not fully utilizing all server resources?  AWS lambda is billed by number of requests not by monthly usage, so for a site that gets less than a million requests per month it is virtually free forever!
 
-#### No server admin:
-	- Same as above. No need to patch or upgrade packages as they are managed by the vendor. Plus the server is read-only an created and destroyed after each request, making it virtually impossible to exploit or install malware on it.
+### Focus on your ideas not servers:
+
+Are you spending a lot of time configuring load balancers, docker containers, etc to handle loads? Now you don't have to since it's all done for you.
+
+### Improved latency and geolocation:
+
+Why make a user in India connect to a server thousands of miles away in America? Even if your site is super fast, the download will still be slow because of network latency. Aws Lambda Edge makes it possible for users to connect to the nearest server making the downloads super fast.
+
+### No server vulnerabilities:
+
+Since the lambda instances (or web servers) are created on demand and destroyed after each request, it makes it virtually impossible to hack your web server or install any malware on it.
+
+### No server admin:
+
+Same as above. No need to patch or upgrade packages as they are managed by the vendor. Plus the server is read-only an created and destroyed after each request, making it virtually impossible to exploit or install malware on it.
 
 ## Installation
 
