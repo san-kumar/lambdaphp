@@ -213,3 +213,7 @@ This was just a weekend project for my own amusement but I will definitely add m
 ## Thanks
 
 * [Robert Anderson](https://github.com/ZeroSharp/serverless-php) for the original inspiration.
+
+## License
+
+The software is licensed using an MIT License. It means you can do whatever you want with it (including using it for commercial purposes freely), as long as you include the original copyright and license notice in any copy of the software/source.
