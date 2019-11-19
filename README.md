@@ -1,4 +1,4 @@
-# LambdaPHP v0.01
+# LambdaPHP v0.02
 
 Host your website on Aws Lambda with full PHP 7 support (i.e. pay by requests instead of paying a fixed monthly hosting fee).
 
