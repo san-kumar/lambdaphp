@@ -1,4 +1,5 @@
 <?php
+// Note: This file can run directly on AWS Lambda using LambdaPHP //
 
 include_once __DIR__ . '/../static/header.html';
 

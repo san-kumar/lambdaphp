@@ -1,4 +1,7 @@
-<?php header('Not found', true, 404); ?>
+<?php
+// Note: This file can run directly on AWS Lambda using LambdaPHP //
+
+header('Not found', true, 404); ?>
 
 <h3>404 Error</h3>
 

@@ -1,4 +1,6 @@
 <?php
+// Note: This file can run directly on AWS Lambda using LambdaPHP //
+
 $client = require_once __DIR__ . '/cognito.php';
 
 include_once __DIR__ . '/../../static/header.html';

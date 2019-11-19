@@ -1,4 +1,6 @@
 <?php
+// Note: This file can run directly on AWS Lambda using LambdaPHP //
+
 include_once __DIR__ . '/../static/header.html';
 
 $bucket = 'sanchit-uploads';//change this to your own S3 bucket

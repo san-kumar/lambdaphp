@@ -1,4 +1,6 @@
 <?php
+// Note: This file can run directly on AWS Lambda using LambdaPHP //
+
 /** @var \Aws\CognitoIdentityProvider\CognitoIdentityProviderClient $client */
 $client = require_once __DIR__ . '/cognito.php';
 $clientId = '11g23pofph8tmc9sgriojro5v0'; //Visit  https://console.aws.amazon.com/cognito/signin/ to get your own UserPoolId and ClientId
